@@ -5,9 +5,9 @@ spotbugs {
 }
 
 tasks.withType(com.github.spotbugs.SpotBugsTask) {
-    reports {
-        xml.enabled = false
-        html.enabled = true
-    }
-    pluginClasspath = project.configurations.spotbugsPlugins
+	reports {
+		xml.enabled = false
+		html.enabled = true
+	}
+	pluginClasspath = project.configurations.spotbugsPlugins
 }
