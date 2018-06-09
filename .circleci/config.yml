@@ -1,0 +1,9 @@
+version: 2
+jobs:
+  build:
+    working_directory: /app
+    docker:
+      - image: openjdk:8-jdk
+    steps:
+      - checkout
+      - run: ./gradlew spotbugsMain
