@@ -29,4 +29,12 @@ allprojects {
 	apply plugin: "com.github.spotbugs"
 
 	apply from: "${rootProject.projectDir}/spotbugs.gradle"
+
+	tasks.withType(com.github.spotbugs.SpotBugsTask) {
+		reports {
+			xml.enabled = false
+			html.enabled = true
+		}
+		pluginClasspath = project.configurations.spotbugsPlugins
+	}
 }
